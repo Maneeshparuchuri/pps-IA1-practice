@@ -1,33 +1,32 @@
-#include <stdio.h>
-void input(int *a,int *b,int *c)
+#include<stdio.h>
+float input()
 {
-  printf("enter the values of a,b,c");
-  scanf("%d%d%d",a,b,c);
+  printf("enter the number:\n ");
+  float k;
+  scanf("%f",&k);
+  return k;
 }
-void com(int a,int b,int c,int *big)
+float my_sqrt(float f)
 {
-  if(a>b&&a>c)
+  float sqrt;
+  float a=f/2;
+  float a2=f;
+  while(a2!=a)
   {
-    *big =a;
+    a2=a;
+    a=(a+(f/a))/2;
   }
-  else if (b>c)
-  {
-    *big=b;
-  }
-  else
-  {
-    *big =c;
-  }
+  return a;
 }
-void output(int big)
+void output(float n,float sqrt)
 {
-  printf("the biggest number = %d",big);
+  printf ("square root of %f is %f\n,n,sqrt");
 }
-int main ()
+int main()
 {
-  int a,b,c,big;
-  input (&a,&b,&c);
-  com(a,b,c,&big);
-  output(big);
+  float sqrt n;
+  n=input();
+  sqrt=my_sqrt(n);
+  output(n,sqrt);
   return 0;
 }
