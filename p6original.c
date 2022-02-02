@@ -1,32 +1,52 @@
 #include<stdio.h>
-float input()
+void input_two_string(char *a,char *b)
 {
-  printf("enter the number:\n ");
-  float k;
-  scanf("%f",&k);
-  return k;
+  
+  printf("enter the string\n");
+  scanf("%s %s",a,b);
+      
 }
-float my_sqrt(float f)
+int strcmp(char *a,char *b)
 {
-  float sqrt;
-  float a=f/2;
-  float a2=f;
-  while(a2!=a)
+  int i;
+  for(i=0;a[i] !='\0'&& b[i]!='\0';i++)
   {
-    a2=a;
-    a=(a+(f/a))/2;
+  if(a[i]>b[i])
+  {
+    return 1;
   }
-  return a;
+  if(b[i]>a[i])
+  {
+    return -1;
+  }
+  if(a[i]==b[i])
+  {
+    continue ;
+  }
+  }
 }
-void output(float n,float sqrt)
+
+void output( char *a,char *b,int result)
 {
-  printf ("square root of %f is %f\n,n,sqrt");
+  if(result=1)
+  {
+  printf("%s is grater than %s\n",a,b);
+  }
+  if(result=-1)
+  {
+      printf("%s is grater than %s\n",b,a);
+  }
+  if(result==0)
+  {
+      printf("%s equval to %s",a,b);
+  }
 }
 int main()
 {
-  float sqrt n;
-  n=input();
-  sqrt=my_sqrt(n);
-  output(n,sqrt);
-  return 0;
-}
+    char a[20],b[30];
+    int ans;int result;
+input_two_string(a,b);
+ans=strcmp(a,b);
+output(a,b,result);
+return 0;
+} 
