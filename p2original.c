@@ -27,4 +27,3 @@ int main()
   output(x,y,sum);
   return 0;
 }
-
