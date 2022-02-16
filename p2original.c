@@ -6,14 +6,12 @@ int input()
   scanf("%d",&a);
   return a;
 }
-
 int add(int a, int b)
   {
     int sum;
     sum=a+b;
     return sum;
   }
-
 void output(int a,int b,int sum)
   {
    printf("sum of %d and %d is %d",a,b,sum);

@@ -9,7 +9,6 @@ void find_sum (int a,int b, int *find_sum)
   *find_sum=a+b;
 }
 void output (int a, int b, int c)
-
 {
   printf("sum%d+%d is %d\n",a,b,c);
 }
